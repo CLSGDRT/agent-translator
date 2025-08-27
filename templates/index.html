@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Translator Agent</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1>Translator Agent</h1>
+
+        <div>
+            <div class="actions">
+                <textarea id="message" name="message" rows="6" cols="40" placeholder="Écris ton message ici..."></textarea>
+                <button id="btnValid">Valider</button>
+                <span id="status">...</span>
+            </div>
+            <div id="translate"></div>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>

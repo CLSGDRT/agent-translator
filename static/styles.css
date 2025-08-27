@@ -1,0 +1,177 @@
+/* -----------------------------
+   Styles Globaux
+------------------------------ */
+body {
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 1.5rem 0 1rem;
+    color: #34495e;
+    letter-spacing: -0.5px;
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 1.6rem; /* Base = petit mobile */
+}
+
+/* -----------------------------
+   Conteneur principal
+------------------------------ */
+.container {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 900px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* -----------------------------
+   Section actions
+------------------------------ */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* -----------------------------
+   Boutons modernes
+------------------------------ */
+button {
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    flex: 1 1 auto;
+    min-width: 120px;
+}
+
+button:hover:not(:disabled) {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* -----------------------------
+   Status
+------------------------------ */
+#status {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    flex: 1 1 100%;
+}
+
+
+
+/* -----------------------------
+   Translate
+------------------------------ */
+textarea {
+    background: #f9fafc;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    min-height: 80px;
+    font-size: 1rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+#translate {
+    background: #f9fafc;
+    border: 1px solid #e0e6ed;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    min-height: 80px;
+    font-size: 1rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    margin-top: 5px;
+}
+
+/* -----------------------------
+   Responsive Design
+------------------------------ */
+
+/* Petit mobile (max 400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+/* Grand mobile (401px → 600px) */
+@media (min-width: 401px) and (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Tablette (601px → 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .container {
+        max-width: 700px;
+    }
+}
+
+/* PC standard (901px → 1400px) */
+@media (min-width: 901px) and (max-width: 1400px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .container {
+        max-width: 850px;
+    }
+}
+
+/* Wide screen PC (1401px et +) */
+@media (min-width: 1401px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        max-width: 1100px;
+        padding: 2.5rem;
+    }
+}
